@@ -1,2 +1,5 @@
-This repository is for Github.io.
-It consists of an HTML file and several image files.
+### What is this repository? 🌷
+
+<p>
+This repository is a Github.io repository.<br>
+It consists of several HTML files and image files.<br>
