@@ -9,5 +9,5 @@ It consists of several HTML files and image files.<br>
 
 <p>
 The blog is updated regularly.<br>
-The URL is here : <a href="https://otenkigirlexe.github.io">otenkigirl.github.io</a>
+The URL is here : <a href="https://otenkigirlexe.github.io">https://otenkigirlexe.github.io</a>
 </p>
