@@ -1,11 +1,11 @@
-### What is this repository? 
+### What is this repository? 🌷
 
 <p>
 This repository is a Github.io repository.<br>
 It consists of several HTML files and image files.<br>
 </p>
 
-### Blog URL
+### Blog URL🛴
 
 <p>
 The blog is updated regularly.<br>
