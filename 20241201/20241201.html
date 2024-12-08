@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExifToolを用いてJPGファイルのファイル名を一括編集 / ひよこニキのホームページ</title>
+    <link rel="icon" type="image/webp" href="../icon.webp">
+    <style>
+        body {
+            background-color: #FCF16E;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h3 {
+            text-align: center;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #000;
+        }
+        p {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .contact-info {
+            text-align: left;
+        }
+        address {
+            text-align: right;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>ExifToolを用いてJPGファイルのファイル名を一括編集 / ひよこニキのホームページ</h3>
+        <hr>
+        <p>ExifToolを用いてJPGファイルのファイル名を一括編集</p>
+        <a href="20241208_174610.webp" target="_blank">
+            <img src="20241208_174610.webp">
+        </a>
+        <p>数年前より使用していたスマートフォンが故障してしまい、半年前ぐらいからiPhoneを利用しています。</p>
+        <p>結構使いづらいなと思った点が結構有ったのですが、その一つが撮影したJPGの保存ファイル名。</p>
+        <p>前機種であるXpeiraではPhotographyProを使用すればファイル名が日付_日時.JPGで保存されていたんですね。</p>
+        <p>具体的には[YYYYMMDD_HHMMSS.JPG]という形式で保存されていました。
+        <a href="20241208_180415.webp" target="_blank">
+            <img src="20241208_180415.webp">
+        </a>
+        <p>しかしながらiPhoneでは[IMG_\d{4}\.jpg]で保存されてしまうんですね。</p>
+        <a href="20241208_180805.webp" target="_blank">
+            <img src="20241208_180805.webp">
+        </a>
+        <p>このままではファイル管理をする際に不便なので変更していこうと思います。</p>
+        <p>という事でサクっとPowerShellでExifToolを動作させるスクリプトを作成。</p>
+        <a href="20241208_181340.webp" target="_blank">
+            <img src="20241208_181340.webp">
+        </a>
+        <p>これでファイル管理が大分楽になりましたとさ。</p>
+        <p>ダウンロードは以下のリンクから</p>
+        <a href="https://github.com/otenkigirlexe/JPGFileRenamer/releases/download/v1.0.0/JPGFileRenamer.ps1">JPGFileRenamer.ps1</a>
+        <p>ソースコード等が知りたい方はGithubのリポジトリを参照して下さい。</p>
+        <a href="https://github.com/otenkigirlexe/JPGFileRenamer?tab=readme-ov-file">otenkigirlexe/YoutubeDownloader</a>
+        <hr>
+            <p><a href="../index.html">ホーム</a></p>
+        <hr>
+        <address>HiyokoNiki All Rights Reserved.</address>
+    </div>
+</body>
+</html>
