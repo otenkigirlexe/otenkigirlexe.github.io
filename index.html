@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,35 +13,63 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
+
         h3 {
             text-align: center;
         }
+
         hr {
             border: none;
             border-top: 1px solid #000;
         }
+
         p {
             margin-left: 20px;
             margin-right: 20px;
         }
-        .contact-info {
-            text-align: left;
-        }
+
         address {
             text-align: right;
         }
+
         img {
             max-width: 100%;
             display: block;
             margin: 0 auto;
         }
+
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #pagination button {
+            background: transparent;
+            border: 1px solid #000;
+            color: #000;
+            padding: 3px 5px;
+            cursor: pointer;
+        }
+
+        #pagination button:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #blog-list {
+            min-height: 500px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h3>ひよこニキのホームページ</h3>
@@ -52,7 +81,15 @@
         </a>
         <p>2024年4月10日、早朝の表参道。</p>
         <hr>
-        <h4>ブログ</h4>
+
+        <div class="blog-header">
+            <h4>ブログ</h4>
+            <div id="pagination">
+                <button id="prev-btn">もどる</button>
+                <span id="page-label"></span>
+                <button id="next-btn">すすむ</button>
+            </div>
+        </div>
 
         <!-- 
         
@@ -60,57 +97,62 @@
         <p><a href="yyyyMMdd/yyyyMMdd.html">yyyyMMdd_Title_Description</a></p>
         
         -->
-        
-        <p><a href="20250622/20250622.html">20250622_ラブライブ！サンシャイン!! Aqours Finale LoveLive! 永久stage</a></p>
-        <p><a href="20250614/20250614.html">20250614_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 大阪公演</a></p>
-        <p><a href="20250606/20250606.html">20250606_Kアリーナのバーへ</a></p>
-        <p><a href="20250601/20250601.html">20250601_Liella! 3rdアルバム「Aspire」を買いました。</a></p>
-        <p><a href="20250505/20250505.html">20250505_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 福岡公演</a></p>
-        <p><a href="20250420/20250420.html">20250420_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 宮城公演</a></p>
-        <p><a href="20250405/20250405.html">20250405_ラッピングバスのお披露目会を観に牛久市へ</a></p>
-        <p><a href="20250324/20250324.html">20250324_備忘録、ヲタクは一匹狼であるべき</a></p>
-        <p><a href="20250323/20250323.html">20250323_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 愛知公演</a></p>
-        <p><a href="20250309/20250309.html">20250309_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 東京公演</a></p>
-        <p><a href="20250222/20250222.html">20250222_秋葉原駅の展示</a></p>
-        <p><a href="20250208/20250208.html">20250208_竹下通りのLiella!フラッグ（昼）</a></p>
-        <p><a href="20250203/20250203.html">20250203_竹下通りのLiella!フラッグ（夜）</a></p>
-        <p><a href="20250202/20250202.html">20250202_LoveLive! Series Asia Tour 2024 横浜公演</a></p>
-        <p><a href="20241219/20241219.html">20241219_渋谷公園通りのLiella!フラッグ</a></p>
-        <p><a href="20241214/20241214.html">20241214_伊達さゆりさんのお渡し会に参加</a></p>
-        <p><a href="20241201/20241201.html">20241201_ExifToolを用いてJPGファイルのファイル名を一括編集</a></p>
-        <p><a href="20241130/20241130.html">20241130_yt-dlpを用いてYoutubeにアップロードされた動画を保存する</a></p>
-        <p><a href="20241114/20241114.html">20241114_秋葉原駅の展示</a></p>
-        <p><a href="20241028/20241028.html">20241028_Liella!3期OP＆ED主題歌リリースイベント</a></p>
-        <p><a href="20241018/20241018.html">20241018_Kアリーナのバーへ</a></p>
-        <p><a href="20241016/20241016.html">20241016_青山なぎささんのミニライブと聖地巡礼</a></p>
-        <p><a href="20240930/20240930.html">20240930_伊達さゆりさんのバースデーイベント</a></p>
-        <p><a href="20240928/20240928.html">20240928_PhoenixからStellarStreamへの繋ぎ</a></p>
-        <p><a href="20240923/20240923.html">20240923_Liella!のフラッグと豊洲での青山なぎささんのミニライブ</a></p>
-        <p><a href="20240804/20240804.html">20240804_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 神奈川公演</a></p>
-        <p><a href="20240720/20240720.html">20240720_池袋へ</a></p>
-        <p><a href="20240715/20240715.html">20240715_ハチのば公開収録</a></p>
-        <p><a href="20240629/20240629.html">20240629_渋谷にLiella!のフラッグが掲載</a></p>
-        <p><a href="20240622/20240622.html">20240622_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 宮城公演</a></p>
-        <p><a href="20240610/20240610.html">20240610_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 新潟公演</a></p>
-        <p><a href="20240504/20240504.html">20240504_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 名古屋公演</a></p>
-        <p><a href="20240429/20240429.html">20240429_伊達ラジ公開録音</a></p>
-        <p><a href="20240410/20240410.html">20240410_早朝の原宿散歩</a></p>
-        <p><a href="20240310/20240310.html">20240310_LoveLive! Series Presents ユニット甲子園 2024</a></p>
-        <p><a href="20240211/20240211.html">20240211_ラブライブ！スーパースター!! Liella! 5th LoveLive! Twinkle Triangle</a></p>
-        <p><a href="20240127/20240127.html">20240127_伊達さゆりさんのお渡し会</a></p>
-        <p><a href="20231210/20231210.html">20231210_異次元フェス アイドルマスター ラブライブ！歌合戦</a></p>
-        <p><a href="20231207/20231207.html">20231207_神宮外苑と原宿を散歩</a></p>
-        <p><a href="20231119/20231119.html">20231119_ラブライブ！蓮ノ空女学院スクールアイドルクラブ 1st Live Tour RUN！CAN！FUN！</a></p>
-        <p><a href="20230930/20230930.html">20230930_伊達さゆりさんのバースーデーイベント</a></p>
-        <p><a href="20230910/20230910.html">20230910_ラブライブ！スーパースター!! Liella! 4th LoveLive! Tour brand new Sparkle</a></p>
-        <p><a href="20230727/20230727.html">20230727_ブシロードゲームズ発表会2023</a></p>
-        <p><a href="20230717/20230717.html">20230717_初夏の沼津</a></p>
-        <p><a href="20230625/20230625.html">20230625_スクフェス感謝祭2023</a></p>
-        <p><a href="20230304/20230304.html">20230304_ラブライブ！スーパースター!! Liella! 3rd LoveLive! Tour WE WILL!!</a></p>
-        <p><a href="20220408/20220408.html">20220408_須賀神社</a></p>
-        <p><a href="20210621/20210621.html">20210621_新宿のマクドナルド</a></p>
-        <p><a href="20210612/20210612.html">20210612_さるびあ丸</a></p>
-        <p><a href="20210610/20210610.html">20210610_六本木ヒルズの展望台</a></p>
+
+        <div id="blog-list">
+
+            <p><a href="20250622/20250622.html">20250622_ラブライブ！サンシャイン!! Aqours Finale LoveLive! 永久stage</a></p>
+            <p><a href="20250614/20250614.html">20250614_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 大阪公演</a></p>
+            <p><a href="20250606/20250606.html">20250606_Kアリーナのバーへ</a></p>
+            <p><a href="20250601/20250601.html">20250601_Liella! 3rdアルバム「Aspire」を買いました。</a></p>
+            <p><a href="20250505/20250505.html">20250505_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 福岡公演</a></p>
+            <p><a href="20250420/20250420.html">20250420_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 宮城公演</a></p>
+            <p><a href="20250405/20250405.html">20250405_ラッピングバスのお披露目会を観に牛久市へ</a></p>
+            <p><a href="20250324/20250324.html">20250324_備忘録、ヲタクは一匹狼であるべき</a></p>
+            <p><a href="20250323/20250323.html">20250323_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 愛知公演</a></p>
+            <p><a href="20250309/20250309.html">20250309_ラブライブ！スーパースター!! Liella! 6th LoveLive! Tour Let's be ONE 東京公演</a></p>
+            <p><a href="20250222/20250222.html">20250222_秋葉原駅の展示</a></p>
+            <p><a href="20250208/20250208.html">20250208_竹下通りのLiella!フラッグ（昼）</a></p>
+            <p><a href="20250203/20250203.html">20250203_竹下通りのLiella!フラッグ（夜）</a></p>
+            <p><a href="20250202/20250202.html">20250202_LoveLive! Series Asia Tour 2024 横浜公演</a></p>
+            <p><a href="20241219/20241219.html">20241219_渋谷公園通りのLiella!フラッグ</a></p>
+            <p><a href="20241214/20241214.html">20241214_伊達さゆりさんのお渡し会に参加</a></p>
+            <p><a href="20241201/20241201.html">20241201_ExifToolを用いてJPGファイルのファイル名を一括編集</a></p>
+            <p><a href="20241130/20241130.html">20241130_yt-dlpを用いてYoutubeにアップロードされた動画を保存する</a></p>
+            <p><a href="20241114/20241114.html">20241114_秋葉原駅の展示</a></p>
+            <p><a href="20241028/20241028.html">20241028_Liella!3期OP＆ED主題歌リリースイベント</a></p>
+            <p><a href="20241018/20241018.html">20241018_Kアリーナのバーへ</a></p>
+            <p><a href="20241016/20241016.html">20241016_青山なぎささんのミニライブと聖地巡礼</a></p>
+            <p><a href="20240930/20240930.html">20240930_伊達さゆりさんのバースデーイベント</a></p>
+            <p><a href="20240928/20240928.html">20240928_PhoenixからStellarStreamへの繋ぎ</a></p>
+            <p><a href="20240923/20240923.html">20240923_Liella!のフラッグと豊洲での青山なぎささんのミニライブ</a></p>
+            <p><a href="20240804/20240804.html">20240804_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 神奈川公演</a></p>
+            <p><a href="20240720/20240720.html">20240720_池袋へ</a></p>
+            <p><a href="20240715/20240715.html">20240715_ハチのば公開収録</a></p>
+            <p><a href="20240629/20240629.html">20240629_渋谷にLiella!のフラッグが掲載</a></p>
+            <p><a href="20240622/20240622.html">20240622_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 宮城公演</a></p>
+            <p><a href="20240610/20240610.html">20240610_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 新潟公演</a></p>
+            <p><a href="20240504/20240504.html">20240504_ラブライブ！スーパースター!! Liella! ユニットライブ＆ファンミーティングツアー 心・技・体！極上大冒険!! 名古屋公演</a></p>
+            <p><a href="20240429/20240429.html">20240429_伊達ラジ公開録音</a></p>
+            <p><a href="20240410/20240410.html">20240410_早朝の原宿散歩</a></p>
+            <p><a href="20240310/20240310.html">20240310_LoveLive! Series Presents ユニット甲子園 2024</a></p>
+            <p><a href="20240211/20240211.html">20240211_ラブライブ！スーパースター!! Liella! 5th LoveLive! Twinkle Triangle</a></p>
+            <p><a href="20240127/20240127.html">20240127_伊達さゆりさんのお渡し会</a></p>
+            <p><a href="20231210/20231210.html">20231210_異次元フェス アイドルマスター ラブライブ！歌合戦</a></p>
+            <p><a href="20231207/20231207.html">20231207_神宮外苑と原宿を散歩</a></p>
+            <p><a href="20231119/20231119.html">20231119_ラブライブ！蓮ノ空女学院スクールアイドルクラブ 1st Live Tour RUN！CAN！FUN！</a></p>
+            <p><a href="20230930/20230930.html">20230930_伊達さゆりさんのバースーデーイベント</a></p>
+            <p><a href="20230910/20230910.html">20230910_ラブライブ！スーパースター!! Liella! 4th LoveLive! Tour brand new Sparkle</a></p>
+            <p><a href="20230727/20230727.html">20230727_ブシロードゲームズ発表会2023</a></p>
+            <p><a href="20230717/20230717.html">20230717_初夏の沼津</a></p>
+            <p><a href="20230625/20230625.html">20230625_スクフェス感謝祭2023</a></p>
+            <p><a href="20230304/20230304.html">20230304_ラブライブ！スーパースター!! Liella! 3rd LoveLive! Tour WE WILL!!</a></p>
+            <p><a href="20220408/20220408.html">20220408_須賀神社</a></p>
+            <p><a href="20210621/20210621.html">20210621_新宿のマクドナルド</a></p>
+            <p><a href="20210612/20210612.html">20210612_さるびあ丸</a></p>
+            <p><a href="20210610/20210610.html">20210610_六本木ヒルズの展望台</a></p>
+
+        </div>
+
         <hr>
         <h4>プロフィール</h4>
         <p>新海誠監督作品とラブライブ！シリーズが好きです。</p>
@@ -125,5 +167,43 @@
         <hr>
         <address>HiyokoNiki All Rights Reserved.</address>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const itemsPerPage = 10;
+            const blogContainer = document.getElementById("blog-list");
+            const blogItems = blogContainer.querySelectorAll("p");
+            const totalItems = blogItems.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            let currentPage = 1;
+
+            function showPage(page) {
+                if (page < 1) page = 1;
+                if (page > totalPages) page = totalPages;
+                currentPage = page;
+
+                blogItems.forEach((item, index) => {
+                    if (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) {
+                        item.style.display = "";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+
+                document.getElementById("page-label").textContent =
+                    `ページ数: ${currentPage} / ${totalPages}`;
+
+                document.getElementById("prev-btn").disabled = currentPage === 1;
+                document.getElementById("next-btn").disabled = currentPage === totalPages;
+            }
+
+            document.getElementById("prev-btn").addEventListener("click", () => showPage(currentPage - 1));
+            document.getElementById("next-btn").addEventListener("click", () => showPage(currentPage + 1));
+
+            showPage(1);
+        });
+
+    </script>
 </body>
+
 </html>
